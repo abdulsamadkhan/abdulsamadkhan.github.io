@@ -1,39 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Handwritten Recognition Demo</title>
-    <style>
-      body {
-        background-color: #f2f2f2;
-        font-family: Arial, sans-serif;
-      }
-      
-      h1 {
-        color: #333;
-        text-align: center;
-        padding-top: 30px;
-      }
-      
-      p {
-        color: #666;
-        text-align: center;
-        font-size: 18px;
-        margin-bottom: 30px;
-      }
-      
-      img {
-        display: block;
-        margin: 0 auto;
-        border: 2px solid #666;
-        border-radius: 10px;
-        box-shadow: 2px 2px 10px #999;
-      }
-    </style>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>This is demo of the project for handwritten recognition</h1>
-    <p>The input should be in the format given as shown in the images</p>
-    <img src="image1.jpg" alt="Example Image 1" width="400" height="300">
-    <img src="image2.jpg" alt="Example Image 2" width="400" height="300">
+    <header>
+      <h1>My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a web developer who specializes in front-end development. I enjoy creating clean, responsive designs that make websites easy to use and visually appealing.</p>
+      </section>
+      
+      <section id="projects">
+        <h2>My Projects</h2>
+        
+        <div class="project">
+          <h3>Project 1</h3>
+          <p>Description of project 1.</p>
+          <a href="#">Link to project 1</a>
+        </div>
+        
+        <div class="project">
+          <h3>Project 2</h3>
+          <p>Description of project 2.</p>
+          <a href="#">Link to project 2</a>
+        </div>
+        
+        <div class="project">
+          <h3>Project 3</h3>
+          <p>Description of project 3.</p>
+          <a href="#">Link to project 3</a>
+        </div>
+      </section>
+      
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2023 My Portfolio</p>
+    </footer>
   </body>
 </html>
