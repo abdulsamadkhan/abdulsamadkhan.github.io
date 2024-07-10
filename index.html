@@ -3,51 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Abdul Samad's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Thomas Gültzow</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        header p {
+            margin: 5px 0 20px;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            border-radius: 50%; /* Make the image round */
+            width: 200px; /* Adjust the size as needed */
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .about-me {
+            color: #007BFF; /* Blue color for "About Me" text */
+        }
+
+        .interests {
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        .education {
+            margin-bottom: 20px;
+        }
+
+        .publications {
+            margin-bottom: 20px;
+        }
+
+        .publications h3 {
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+
+        .topics {
+            margin-bottom: 20px;
+        }
+
+        .topics ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .topics ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .topics ul li a {
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .topics ul li a:hover {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer-text {
+            font-size: 0.8em;
+            color: #666;
+        }
+        .linkedin-link img {
+    width: 30px;
+    height: 30px;
+    transition: width 0.3s, height 0.3s;  
+}
+
+.linkedin-link img:hover {
+    width: 40px; 
+    height: 40px; 
+}
+
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#bio">Bio</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#interests">Interests</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#cvs">CVs</a></li>
+        <div class="container">
+            <h1>Abdul Samad</h1>
+            <p>Head Of Computer Science<br>Habib University 🇳🇱</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="#publications">Research</a></li>
+                    <li><a href="#topics">Projects And Blogs</a></li>
+                    <li><a href="https://www.linkedin.com/in/abdul-samad-bb727533/" class="linkedin-link"><img src="data:image/png;base64,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" alt="LinkedIn"></a></li>
+               <li><a href="https://github.com/abdulsamadkhan" class="linkedin-link"><img src="data:image/jpeg;base64,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" alt="LinkedIn"></a></li>
+                <li><a href="mailto:abdul.samad@sse.habib.edu.pk" class="linkedin-link"><img src="data:image/png;base64,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" alt="LinkedIn"></a></li>
             </ul>
-        </nav>
+            </nav>
+        </div>
     </header>
-
-    <section id="bio">
-        <h1>Bio</h1>
-        <p>Dr. Abdul Samad has over a decade of experience in teaching and research, specializing in Machine Learning, Natural Language Processing (NLP), Deep Learning, Data Analysis, Computer Vision, and algorithms...</p>
-    </section>
-
-    <section id="research">
-        <h1>Research</h1>
-        <p>Dr. Samad's research interests include NLP, particularly in the finetuning of Large Language Models (LLMs)...</p>
-    </section>
-
-    <section id="interests">
-        <h1>Interests</h1>
-        <p>Dr. Samad is also actively involved in teaching courses such as Introduction to Large Language Models, Probability and Statistics, and Algorithms...</p>
-    </section>
-
-    <section id="projects">
-        <h1>Projects</h1>
-        <p>Dr. Samad has supervised numerous theses and published research papers in the field...</p>
-    </section>
-
-    <section id="cvs">
-        <h1>CVs</h1>
-        <p>You can download Dr. Samad's CVs <a href="#">here</a>.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Dr. Abdul Samad. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <main>
+        <section id="about">
+            <div class="container">
+                <div class="image-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpz-L_nHzTjRggeV6FYn2x2FsOr3STjXNo-w&s" alt="Profile Image">
+                </div>
+                <div>
+                    <h2 class="rolly">About Me</h2>
+                    <p>Dr. Abdul Samad has over a decade of experience in teaching and research, specializing in Machine Learning, Natural Language Processing (NLP), Deep Learning, Data Analysis, Computer Vision, and algorithms. He holds a Ph.D. in Computer Science obtained through a Fulbright scholarship. Currently serving as the Program Director for the Computer Science department, Dr. Samad oversees curriculum development and academic operations, focusing on enhancing student learning outcomes. His research interests include NLP, particularly in the finetuning of Large Language Models (LLMs), evidenced by his supervision of numerous theses and publication of research papers in the field.</p>
+                </div>
+            </div>
+        </section>
+        <section id="teaching">
+            <div class="container">
+                <h2>Teachings/Courses</h2>
+                    <ul>
+                        <li>He Started Teaching AI</li>
+                        <li>He Started Giving Courses Of Game Development On Coursera</li>
+                        <li>He Gave Courses Of Robot Tech At Coursera</li>
+                        <li>He Got 140+ Award In Habib</li>
+                    </ul>
+            </div>
+        </section>
+        <section id="publications">
+            <div class="container">
+                <h2>Research</h2>
+                    <p>Some recent papers:</p>
+                    <ul>
+                        <li>Dad, I., He, J., Noor, W. et al. Cross Classification Matrix to Evaluate the Performance of Machine Learning Algorithms in Predicting Students Performance of Developing Regions. SN COMPUT. SCI. 5, 621 (2024)
+                            <a href="https://doi.org/10.1007/s42979-024-02909-y">DOI</a>
+                        </li>
+                        <li>Muneeb Shafique, Abdul Majid, Sajeel Alam, Abdul Samad: Does your robot know when to cross the road? : INMIC 2023 25th International Multi Topic Conference
+                            <a href="https://doi.org/10.1109/INMIC60434.2023.10465985">DOI</a>
+                        </li>
+                        <li>Saad Fahim, Iqra Siddiqui, Sameer Pervez, Sandesh Kumar, Faisal Alvi and Abdul Samad: Generation of Urdu Ghazals using Deep Learning, FIT'23: 20th International Conference on Frontiers of Information Technology 
+                            <a href="https://doi.org/10.1109/FIT60620.2023.00058">DOI</a>
+                        </li>
+                        <li>Maqdoom, M. H., Najam, S. A., Ali, S., Fatima, S., Momin, A., Samad, A., & Jamshed, H. (2023). Inclusiveness in Food Data Sets: Development of a Food Composition Dataset for South Asian Recipes With Focus on Pakistan. Journal of Nutrition Education and Behavior, 55(7), 98.
+                            <a href="https://doi.org/10.1016/j.jneb.2023.05.212">DOI</a> 
+                        </li>
+                        <li>Mughal, S. F., Aamir, S., Sahto, S. A., & Samad, A. (2022). Urdu Music Genre Classification Using Convolution Neural Networks. 2022 International Conference on Emerging Trends in Smart Technologies (ICETST), 1–6.
+                            <a href="https://doi.org/10.1109/ICETST55735.2022.9922934">DOI</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                
+        </section>
+        <section id="topics">
+            <div class="container">
+                <h2>Projects And Blogs</h2>
+                <div class="topics">
+                    <p>Nothing Here Now.But Will Come Later.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
 </body>
 </html>
